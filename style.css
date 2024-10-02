@@ -1,31 +1,94 @@
-header {
-    width: 100vw;
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+
+.title {
+    font-family: "Sixtyfour Convergence";
+    font-size: 1.5em;
+}
+
+img {
+    border-radius: 2vw;
 }
 
 header ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 header ul li {
+    padding: 5px;
     display: inline;
-    padding: 0px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tr {
+    flex-direction: column;
+}
+
+table tr td {
+    border: 2px solid #555;
+    font-family: "Raleway";
+    font-size: 12px;
 }
 
 .headerItem {
-    padding: 5px;
+    position: relative;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    font-size: 1em;
+    padding: 5px;
     letter-spacing: 2px;
     color: #fff;
     background-color: #777;
-    border-radius: 8px
-    
+    border-radius: 8px;
+    white-space: nowrap;
+    margin-top: 50px;
+    line-height: 30px;
+    transition-duration: 200ms;
 }
 
 .headerItem:hover {
     background-color: #555;
     transition-duration: 200ms;
+    font-size: 1.2em;
+
+}
+
+@keyframes scaleInAndOut {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header ul {
+        display: inline;
+    }
+
+    header ul li {
+        display: block;
+    }
+
+    .headerItem {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        transition-duration: 0s;
+        animation-duration: 0s;
+    }
+    .headerItem:hover {
+        font-size: 1em;
+        transition-duration: 0s;
+        animation-duration: 0s;
+    }
 }
