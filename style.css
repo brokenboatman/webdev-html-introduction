@@ -20,7 +20,12 @@ header ul li {
     font-weight: bold;
     letter-spacing: 2px;
     color: #fff;
-    background-color: grey;
+    background-color: #777;
     border-radius: 8px
     
+}
+
+.headerItem:hover {
+    background-color: #555;
+    transition-duration: 200ms;
 }
